@@ -1,0 +1,26 @@
+[project]
+name = "git-pr-create-skill"
+# Unused: the repository is not built as a package; apm.yml owns the plugin version.
+version = "0.0.0"
+description = "Agent Skill that creates or refreshes GitHub pull requests from the net diff"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "pytest==9.1.1",
+  "ruff==0.16.9",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP", "B", "SIM", "C901", "PLR0911", "PLR0912", "PLR0913", "PLR0915"]
+src = ["tests"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+testpaths = ["tests"]

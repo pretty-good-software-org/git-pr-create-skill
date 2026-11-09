@@ -1,0 +1,8 @@
+{
+  "name": "git-pr-create",
+  "version": "1.2.1",
+  "description": "Create or refresh GitHub PRs from the live net diff, attach bug or before/after videos when provided, and drive checks green when possible. Use when: opening PRs, updating stale PRs after new commits, or adding a recording to a fix PR. Triggers: /git-pr-create, create PR, open pull request, update PR, attach video to PR.",
+  "author": {
+    "name": "pretty-good-software-org"
+  }
+}
