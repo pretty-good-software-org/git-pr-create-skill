@@ -1,0 +1,3 @@
+kind: Fixed
+body: Mark a draft ready with `gh pr ready "$PR" -R "$REPO"`, naming the repository explicitly.
+time: 2026-11-10T03:32:05.500998+01:00

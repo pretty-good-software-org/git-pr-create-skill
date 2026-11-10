@@ -185,7 +185,7 @@ gh pr create --title "$TITLE" --body "$BODY"
 To mark an existing draft PR as ready for review:
 
 ```bash
-gh pr ready "$PR"
+gh pr ready "$PR" -R "$REPO"
 ```
 
 ## Base Branch
