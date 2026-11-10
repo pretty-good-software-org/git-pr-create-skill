@@ -14,8 +14,8 @@ FRONTMATTER = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 RELATIVE_LINK = re.compile(r"\]\((?!https?://|#)([^)]+)\)")
 
 
-def read_frontmatter(skill_text):
-    """name and description from the frontmatter; the description is a JSON-style quoted string."""
+def parse_frontmatter(skill_text):
+    """Every frontmatter field by key; a double-quoted value is decoded as a JSON string."""
     fields = {}
     for line in FRONTMATTER.match(skill_text).group(1).splitlines():
         key, value = line.split(": ", 1)
@@ -35,7 +35,7 @@ def test_manifest_lists_exactly_the_plugin_fields():
 def test_skill_frontmatter_mirrors_the_plugin_manifest():
     manifest = json.loads(MANIFEST_PATH.read_text())
 
-    frontmatter = read_frontmatter(SKILL_PATH.read_text())
+    frontmatter = parse_frontmatter(SKILL_PATH.read_text())
 
     identity = {key: frontmatter.get(key) for key in ("name", "description")}
     expected = {"name": "git-pr-create", "description": manifest["description"]}
