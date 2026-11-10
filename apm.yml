@@ -1,7 +1,7 @@
 # APM package metadata for reproducible installation and audit.
 # The standard skills/<name>/SKILL.md layout is auto-detected by APM.
 name: git-pr-create
-version: 1.2.1
+version: 1.2.2
 description: >-
   Create or refresh GitHub PRs from the live net diff, attach bug or before/after videos when provided, and drive checks
   green when possible. Use when: opening PRs, updating stale PRs after new commits, or adding a recording to a fix PR.

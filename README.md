@@ -25,13 +25,13 @@ checks to green when the failures are within reach.
 With [APM](https://github.com/microsoft/apm), pinned to a release:
 
 ```bash
-apm install pretty-good-software-org/git-pr-create-skill#v1.2.1
+apm install pretty-good-software-org/git-pr-create-skill#v1.2.2
 ```
 
 Without APM, copy the skill directory into your agent's skills directory, for example for Claude Code:
 
 ```bash
-git clone --depth 1 --branch v1.2.1 https://github.com/pretty-good-software-org/git-pr-create-skill.git
+git clone --depth 1 --branch v1.2.2 https://github.com/pretty-good-software-org/git-pr-create-skill.git
 cp -R git-pr-create-skill/skills/git-pr-create ~/.claude/skills/
 ```
 

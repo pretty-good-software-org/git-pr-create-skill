@@ -38,6 +38,7 @@ license.
 │   ├── 1.1.0.md
 │   ├── 1.2.0.md
 │   ├── 1.2.1.md
+│   ├── 1.2.2.md
 │   ├── header.tpl.md
 │   └── unreleased
 │       └── .gitkeep
