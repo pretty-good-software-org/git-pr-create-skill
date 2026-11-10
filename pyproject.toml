@@ -22,5 +22,4 @@ select = ["E", "F", "I", "UP", "B", "SIM", "C901", "PLR0911", "PLR0912", "PLR091
 src = ["tests"]
 
 [tool.pytest.ini_options]
-addopts = "-p no:cacheprovider"
 testpaths = ["tests"]
