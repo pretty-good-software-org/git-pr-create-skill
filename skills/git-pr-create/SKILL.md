@@ -102,10 +102,10 @@ For a compact summary of the live PR's changed files, additions, and deletions, 
 [`gh pr view`](https://cli.github.com/manual/gh_pr_view):
 
 ```bash
-gh pr view "$PR_NUMBER" -R "$REPO" --json changedFiles,additions,deletions,files
+gh pr view "$PR" -R "$REPO" --json changedFiles,additions,deletions,files
 ```
 
-Set `REPO` to the target `OWNER/REPO`. Use `gh pr diff "$PR_NUMBER" -R "$REPO"` to review patch content;
+Set `REPO` to the target `OWNER/REPO`. Use `gh pr diff "$PR" -R "$REPO"` to review patch content;
 statistics do not replace that review. Unlike `git diff`, `gh pr diff` does not support `--stat` or `--check`.
 Check `gh pr diff --help` before using unfamiliar flags rather than assuming Git flags apply.
 
@@ -185,7 +185,7 @@ gh pr create --title "$TITLE" --body "$BODY"
 To mark an existing draft PR as ready for review:
 
 ```bash
-gh pr ready {PR_NUMBER}
+gh pr ready "$PR"
 ```
 
 ## Base Branch
